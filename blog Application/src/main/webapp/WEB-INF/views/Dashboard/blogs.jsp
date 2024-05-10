@@ -11,13 +11,12 @@
     <!-- DataTables CSS -->
     <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <style>
-        /* Custom styles here */
         .card {
             border: none;
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         }
 
-        body{
+        body {
             background-color: #4CAF50;
         }
     </style>
@@ -46,11 +45,9 @@
                 <a class="nav-link" href="/logout">logout</a>
             </li>
         </ul>
-        <!-- Add logout or other actions if needed -->
     </div>
 </nav>
 
-<!-- Main content -->
 <!-- Main content -->
 <div class="container mt-4 mb-4">
     <div class="row">
@@ -81,20 +78,28 @@
                                 if (blogs != null) {
                                     for (Blog blog : blogs) { %>
                             <tr>
-                                <td><%= blog.getId() %></td>
+                                <td><%= blog.getId() %>
+                                </td>
                                 <td>
                                     <div class="client">
                                         <div class="client-info">
-                                            <h4><%= blog.getTitle() %></h4>
+                                            <h4><%= blog.getTitle() %>
+                                            </h4>
                                         </div>
                                     </div>
                                 </td>
-                                <td><%= blog.getContent() %></td>
-                                <td><%= blog.getImage() %></td>
-                                <td><%= blog.getCreatedAt() %></td>
-                                <td><%= blog.getUpdatedAt() %></td>
-                                <td><%= blog.getUser().getUsername() %></td>
-                                <td><%= blog.getCategoryId().getName() %></td>
+                                <td><%= blog.getContent() %>
+                                </td>
+                                <td><%= blog.getImage() %>
+                                </td>
+                                <td><%= blog.getCreatedAt() %>
+                                </td>
+                                <td><%= blog.getUpdatedAt() %>
+                                </td>
+                                <td><%= blog.getUser().getUsername() %>
+                                </td>
+                                <td><%= blog.getCategoryId().getName() %>
+                                </td>
                                 <td>
                                     <a class="dropdown-item" href="/blogs/update?blogId=<%= blog.getId() %>">
                                         <button type="button" class="btn btn-primary btn-sm mr-2">Update</button>

@@ -19,7 +19,6 @@
             height: 100%;
         }
 
-
         .card img {
             width: 100%;
             height: 100%;
@@ -97,8 +96,5 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-<%--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>--%>
-<%--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>--%>
-<%--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>--%>
 </body>
 </html>

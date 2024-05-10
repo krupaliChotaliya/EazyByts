@@ -7,13 +7,6 @@
     <title>Update User</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-
-
-        /* Custom styles */
-        .navbar {
-            margin-bottom: 20px;
-        }
-
         .alert {
             margin-top: 20px;
         }

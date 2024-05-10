@@ -35,6 +35,7 @@
         .blog-form:hover {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         .blog-heading {
             text-align: center;
             color: #000000;
@@ -57,7 +58,7 @@
     System.out.println(message);
     if (message != null && !message.isEmpty()) {
 %>
-<div class="alert alert-danger"><%= message %>
+<div class="alert alert-success"><%= message %>
 </div>
 <%
     }

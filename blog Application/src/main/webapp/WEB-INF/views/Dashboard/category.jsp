@@ -11,7 +11,6 @@
     <!-- DataTables CSS -->
     <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <style>
-        /* Custom styles here */
         .card {
             border: none;
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -44,12 +43,9 @@
                 <a class="nav-link" href="/logout">logout</a>
             </li>
         </ul>
-        <!-- Add logout or other actions if needed -->
     </div>
 </nav>
 
-<!-- Main content -->
-<!-- Main content -->
 <div class="container mt-4 mb-3">
     <div class="row">
         <div class="col">

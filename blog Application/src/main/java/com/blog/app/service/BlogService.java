@@ -12,11 +12,11 @@ public interface BlogService {
 
     void createBlog(Blog blog, MultipartFile image) throws Exception;
 
-     List<Blog> getAllBlogs();
+    List<Blog> getAllBlogs();
 
-     List<Blog> getAllBlogsByUserId(int userId);
+    List<Blog> getAllBlogsByUserId(int userId);
 
-    Blog updateBlog(MultipartFile image, Blog updatedBlog,long BlogId);
+    Blog updateBlog(MultipartFile image, Blog updatedBlog, long BlogId);
 
     Optional<Blog> getBlogBYBlogID(int blogId);
 
