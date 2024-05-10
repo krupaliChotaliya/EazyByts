@@ -163,7 +163,7 @@ public class BlogController {
     }
 
     @GetMapping("/blogs")
-    public List<Blog> getAllBlogs(){
+    public List<Blog> getAllBlogs() {
         return blogService.getAllBlogs();
     }
 }

@@ -12,19 +12,19 @@
     <!-- DataTables CSS -->
     <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <style>
-        /* Custom styles here */
         .card {
             border: none;
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         }
-        body{
+
+        body {
             background-color: #4CAF50;
         }
     </style>
 </head>
 <body>
 
-<!-- Navbar -->
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Admin Dashboard</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -74,17 +74,22 @@
                                 if (users != null) {
                                     for (User user : users) { %>
                             <tr>
-                                <td><%= user.getUserId() %></td>
+                                <td><%= user.getUserId() %>
+                                </td>
                                 <td>
                                     <div class="client">
                                         <div class="client-info">
-                                            <h4><%= user.getUsername() %></h4>
+                                            <h4><%= user.getUsername() %>
+                                            </h4>
                                         </div>
                                     </div>
                                 </td>
-                                <td><%= user.getPassword() %></td>
-                                <td><%= user.getEmail() %></td>
-                                <td><%= user.getRole() %></td>
+                                <td><%= user.getPassword() %>
+                                </td>
+                                <td><%= user.getEmail() %>
+                                </td>
+                                <td><%= user.getRole() %>
+                                </td>
                                 <td>
                                     <a class="dropdown-item" href="/users/update?userId=<%= user.getUserId() %>">
                                         <button type="button" class="btn btn-primary btn-sm mr-2">Update</button>

@@ -1,6 +1,5 @@
 package com.blog.app.controller;
 
-
 import com.blog.app.Model.Category;
 import com.blog.app.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,19 +22,19 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @GetMapping("/categories")
-    public List<Category> getAllCategory(){
+    public List<Category> getAllCategory() {
         return categoryService.getAllCategory();
     }
 
     @GetMapping("/category")
-    public String getCategory(Model model){
+    public String getCategory(Model model) {
         Category category = new Category();
         model.addAttribute("category", category);
         return "addCategory";
     }
 
     @PostMapping("/category")
-    public String addCategory(@Valid Category category, BindingResult bindingResult, Model model){
+    public String addCategory(@Valid Category category, BindingResult bindingResult, Model model) {
         categoryService.addCategory(category);
         if (bindingResult.hasErrors()) {
             model.addAttribute("message", "please provide required data!!");

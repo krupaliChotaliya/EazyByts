@@ -56,7 +56,7 @@
     System.out.println(message);
     if (message != null && !message.isEmpty()) {
 %>
-<div class="alert alert-danger"><%= message %>
+<div class="alert alert-success"><%= message %>
 </div>
 <%
     }

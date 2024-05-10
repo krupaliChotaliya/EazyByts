@@ -50,9 +50,5 @@ public class UserServiceImpl implements UserService {
             userRepository.save(newUser);
         }
     }
-
-    @Override
-    public User getAdminLogin(String email, String password) {
-        return userRepository.IsAdmin(email,password,"admin");
-    }
+    
 }

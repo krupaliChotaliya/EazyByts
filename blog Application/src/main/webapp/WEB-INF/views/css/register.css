@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #4CAF50; /* Background color for the page */
+    background-color: #4CAF50;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,7 +33,7 @@ body {
   }
 
   .header {
-    background-color: #777; /* Background color for the header */
+    background-color: #777;
     padding: 10px 20px;
     text-align: left;
     color: #fff; /* Text color for the header */

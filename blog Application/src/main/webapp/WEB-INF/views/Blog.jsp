@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Custom CSS -->
     <style>
-
-
         .blog-card {
             border: none;
             margin-bottom: 30px;
@@ -30,7 +28,7 @@
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
             object-fit: scale-down;
-            height: 300px; /* Adjust image height as needed */
+            height: 300px;
             width: 100%;
         }
 
@@ -51,7 +49,7 @@
     </style>
 </head>
 <body>
-<%@include file="navbar.jsp"%>
+<%@include file="navbar.jsp" %>
 
 <div class="container mt-4">
     <div class="row justify-content-center">
@@ -59,18 +57,29 @@
             if (blog.isPresent()) { %>
         <div class="col-md-8">
             <div class="card blog-card shadow">
-                <img src="${pageContext.request.contextPath}/image/<%= blog.get().getImage() %>" class="card-img-top" alt="Image">
+                <img src="${pageContext.request.contextPath}/image/<%= blog.get().getImage() %>" class="card-img-top"
+                     alt="Image">
                 <div class="card-body">
-                    <h5 class="card-title blog-title"><%= blog.get().getTitle() %></h5>
-                    <p class="card-text"><%= blog.get().getContent() %></p>
+                    <h5 class="card-title blog-title"><%= blog.get().getTitle() %>
+                    </h5>
+                    <p class="card-text"><%= blog.get().getContent() %>
+                    </p>
                     <div class="blog-details">
-                        <p class="card-text"><span class="textStyle">Category </span> <%= blog.get().getCategoryId().getName() %></p>
-                        <p class="card-text"><span class="textStyle">Author</span> <%= blog.get().getUser().getUsername() %></p>
-                        <p class="card-text"><span class="textStyle">Created At </span> <%= blog.get().getCreatedAt() %></p>
-                        <p class="card-text"><span class="textStyle">Updated At </span> <%= blog.get().getUpdatedAt() %></p>
+                        <p class="card-text"><span
+                                class="textStyle">Category </span> <%= blog.get().getCategoryId().getName() %>
+                        </p>
+                        <p class="card-text"><span
+                                class="textStyle">Author</span> <%= blog.get().getUser().getUsername() %>
+                        </p>
+                        <p class="card-text"><span class="textStyle">Created At </span> <%= blog.get().getCreatedAt() %>
+                        </p>
+                        <p class="card-text"><span class="textStyle">Updated At </span> <%= blog.get().getUpdatedAt() %>
+                        </p>
                     </div>
-                    <a href="${twitterLink}" target="_blank" class="btn btn-sm btn-primary mr-2 mt-3"><i class="fab fa-twitter"></i> Twitter</a>
-                    <a href="${linkedInLink}" target="_blank" class="btn btn-sm btn-primary mt-3"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="${twitterLink}" target="_blank" class="btn btn-sm btn-primary mr-2 mt-3"><i
+                            class="fab fa-twitter"></i> Twitter</a>
+                    <a href="${linkedInLink}" target="_blank" class="btn btn-sm btn-primary mt-3"><i
+                            class="fab fa-linkedin"></i> LinkedIn</a>
                 </div>
             </div>
         </div>

@@ -7,9 +7,7 @@
     <title>Add Category</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #4CAF50;
-        }
+    
 
         .alert {
             margin-top: 20px;
@@ -60,7 +58,7 @@
     System.out.println(message);
     if (message != null && !message.isEmpty()) {
 %>
-<div class="alert alert-danger"><%= message %>
+<div class="alert alert-success"><%= message %>
 </div>
 <%
     }
@@ -69,13 +67,13 @@
     <h2 class="blog-heading">Create a New Category</h2>
     <div class="blog-form">
         <%--@elvariable id="category" type=""--%>
-            <form:form modelAttribute="category"  action="/category" method="post">
-                <div class="form-group">
-                    <label>Category Name:</label>
-                    <form:input path="name" class="form-control" rows="5" required="true"></form:input>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form:form>
+        <form:form modelAttribute="category" action="/category" method="post">
+            <div class="form-group">
+                <label>Category Name:</label>
+                <form:input path="name" class="form-control" rows="5" required="true"></form:input>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form:form>
     </div>
 </div>
 <!-- Bootstrap JS dependencies -->

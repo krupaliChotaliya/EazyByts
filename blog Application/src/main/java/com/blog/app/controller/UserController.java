@@ -113,9 +113,11 @@ public class UserController {
         }
         return "redirect:/login";
     }
+
     public User getUserByEmail(String email) {
         return userService.getUser(email);
     }
+
     public List<User> getUsers() {
         return userService.getAllUsers();
     }
@@ -139,7 +141,7 @@ public class UserController {
             return "redirect:/dashboard/users";
         }
         try {
-            userService.updateUser(user,user.getUserId());
+            userService.updateUser(user, user.getUserId());
             model.addAttribute("message", "Successfully Updated user!!");
             return "redirect:/dashboard/users";
         } catch (Exception e) {

@@ -11,5 +11,5 @@ public interface CategoryService {
 
     Category addCategory(Category category);
 
-    Category getCategory( int categoryId);
+    Category getCategory(int categoryId);
 }

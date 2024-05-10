@@ -14,12 +14,13 @@
             font-weight: bold;
             font-size: 18px;
         }
+
         .content {
             margin-top: 3px;
             margin-left: 2px;
             font-size: 16px;
         }
-        /* Additional CSS for card layout */
+        
         .blog-container-outside {
             display: flex;
             flex-wrap: wrap;
@@ -27,6 +28,7 @@
             gap: 20px;
             margin-top: 20px;
         }
+
         .blog-container {
             width: 400px;
             background-color: white;
@@ -35,6 +37,7 @@
             overflow: hidden;
             margin-bottom: 20px;
         }
+
         .image {
             width: 100%;
             height: 200px;
@@ -47,6 +50,7 @@
             object-fit: contain;
             vertical-align: middle;
         }
+
         .blog-content {
             padding: 15px;
         }
@@ -79,7 +83,8 @@
                 </div>
             </div>
         </div>
-        <% } } else { %>
+        <% }
+        } else { %>
         <div class="col">
             <p>No blogs found.</p>
         </div>

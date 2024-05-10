@@ -21,5 +21,4 @@ public interface UserService {
 
     void updateUser(User user, int userId);
 
-    User getAdminLogin(String email, String password);
 }

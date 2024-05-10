@@ -23,36 +23,26 @@ public class AdminController {
     @Autowired
     private BlogController blogController;
 
-    @Autowired
-    private BlogService blogService;
-
 
     @GetMapping("/dashboard/users")
-    public String getUsers(Model model){
+    public String getUsers(Model model) {
         List<User> users = userController.getUsers();
         model.addAttribute("users", users);
         return "Dashboard/users";
     }
 
     @GetMapping("/dashboard/blogs")
-    public String getBlogs(Model model){
+    public String getBlogs(Model model) {
         List<Blog> blogs = blogController.getAllBlogs();
         model.addAttribute("blogs", blogs);
         return "Dashboard/blogs";
     }
 
     @GetMapping("/dashboard/category")
-    public String getCategory(Model model){
+    public String getCategory(Model model) {
         List<Category> categories = categoryController.getAllCategory();
         model.addAttribute("categories", categories);
         return "Dashboard/category";
     }
 
-    @GetMapping("/test")
-    public String getTestPage(Model model){
-
-        List<Blog> blogs = blogService.getAllBlogs();
-        model.addAttribute("blogs", blogs);
-        return "test";
-    }
 }

@@ -74,6 +74,7 @@ public class BlogServiceImpl implements BlogService {
     public Optional<Blog> getBlogBYBlogID(int blogId) {
         return blogRepository.findById(blogId);
     }
+
     @Override
     public void deleteBlog(int blogId) {
         blogRepository.deleteById(blogId);

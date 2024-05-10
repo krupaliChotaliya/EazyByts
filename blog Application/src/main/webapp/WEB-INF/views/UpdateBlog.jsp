@@ -62,11 +62,15 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="/blog/myblog">My Blog</a>
                 </li>
-                <% String authenticated=null; HttpSession httpSession1=(HttpSession)
-                        request.getSession(false); if (httpSession1 !=null &&
-                        httpSession1.getAttribute("userId") !=null) {
-                    authenticated=httpSession1.getAttribute("userId").toString(); } if
-                (authenticated==null) { %>
+                <% String authenticated = null;
+                    HttpSession httpSession1 = (HttpSession)
+                            request.getSession(false);
+                    if (httpSession1 != null &&
+                            httpSession1.getAttribute("userId") != null) {
+                        authenticated = httpSession1.getAttribute("userId").toString();
+                    }
+                    if
+                    (authenticated == null) { %>
                 <li class="nav-item">
                     <a class="nav-link active" href="/login">login</a>
                 </li>
@@ -75,10 +79,14 @@
                 </li>
                 <% } %>
 
-                <% String userId=null; HttpSession httpSession=(HttpSession)
-                        request.getSession(false); if (httpSession !=null &&
-                        httpSession.getAttribute("userId") !=null) {
-                    userId=httpSession.getAttribute("userId").toString(); } if (userId !=null) {
+                <% String userId = null;
+                    HttpSession httpSession = (HttpSession)
+                            request.getSession(false);
+                    if (httpSession != null &&
+                            httpSession.getAttribute("userId") != null) {
+                        userId = httpSession.getAttribute("userId").toString();
+                    }
+                    if (userId != null) {
                 %>
                 <li class="nav-item">
                     <a class="nav-link active" href="/logout">logout</a>
@@ -87,10 +95,13 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="/blog">Add Blog</a>
                 </li>
-                <% String role=null; if (httpSession !=null &&
-                        httpSession.getAttribute("role") !=null) {
-                    role=httpSession.getAttribute("role").toString(); } if (role !=null
-                        && role.equals("admin")) { %>
+                <% String role = null;
+                    if (httpSession != null &&
+                            httpSession.getAttribute("role") != null) {
+                        role = httpSession.getAttribute("role").toString();
+                    }
+                    if (role != null
+                            && role.equals("admin")) { %>
                 <li class="nav-item">
                     <a class="nav-link active" href="/dashboard/users">Admin
                         DashBoard</a>
@@ -151,9 +162,9 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form:form>
-            <div id="imageContainer" style="margin-top: 20px;">
-                <img id="selectedImage" src="" alt="" style="max-width: 100%; height: auto;">
-            </div>
+        <div id="imageContainer" style="margin-top: 20px;">
+            <img id="selectedImage" src="" alt="" style="max-width: 100%; height: auto;">
+        </div>
     </div>
 </div>
 <!-- Bootstrap JS dependencies -->
@@ -161,10 +172,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script>
-    document.getElementById('imagePicker').addEventListener('change', function(e) {
+    document.getElementById('imagePicker').addEventListener('change', function (e) {
         const file = e.target.files[0];
         const reader = new FileReader();
-        reader.onload = function(event) {
+        reader.onload = function (event) {
             const imageUrl = event.target.result;
             document.getElementById('selectedImage').src = imageUrl;
         }
